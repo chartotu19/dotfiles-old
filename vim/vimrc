@@ -1,0 +1,29 @@
+syntax on
+set nu
+set tabstop=4
+set shiftwidth=4
+let mapleader=" "
+map <leader>k :E<cr>
+set cursorline
+set nocompatible              " be iMproved, required
+filetype off                  " required
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
+
+Plugin 'VundleVim/Vundle.vim'
+
+Plugin 'dracula/vim'
+
+" Sublime/Atom multi cursor selection ( CTRL+n ).
+Bundle "terryma/vim-multiple-cursors"
+
+" C+p fuzzy search
+Bundle 'kien/ctrlp.vim'
+
+Plugin 'bling/vim-airline'
+Plugin 'vim-airline/vim-airline-themes'
+
+call vundle#end()            " required
+filetype plugin indent on    " required
+
+let g:airline#extensions#tabline#enabled = 1
