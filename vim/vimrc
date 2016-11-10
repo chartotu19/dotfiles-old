@@ -1,12 +1,38 @@
 syntax on
-set nu
-set tabstop=4
+
+let mapleader=","       " leader is comma
+
+"UI config
+set number
+set showcmd             " show command in bottom bar
+set wildmenu 
+set lazyredraw          " redraw only when we need to.
+set showmatch           " highlight matching [{()}]
+
+"spaces and tabs
+set tabstop=4 " number of visual spaces per TAB
+set softtabstop=4   " number of spaces in tab when editing
 set shiftwidth=4
-let mapleader=" "
-map <leader>k :E<cr>
-set cursorline
+set noexpandtab " tabs are spaces
+
+
+"Search
+set incsearch           " search as characters are entered
+set hlsearch            " highlight matches
+" turn off search highlight ( they dont go away automatically)
+nnoremap <leader><space> :nohlsearch<CR>
+
+"Code folding
+set foldenable          " enable folding
+set foldlevelstart=20   " open most folds by default
+" space open/closes folds
+nnoremap <space> za
+set foldmethod=indent   " fold based on indent level
+
+
 set nocompatible              " be iMproved, required
 filetype off                  " required
+
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 
@@ -23,7 +49,15 @@ Bundle 'kien/ctrlp.vim'
 Plugin 'bling/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
 
+Plugin 'vim-syntastic/syntastic'
+
 call vundle#end()            " required
 filetype plugin indent on    " required
 
 let g:airline#extensions#tabline#enabled = 1
+
+let g:syntastic_check_on_open=1
+let g:syntastic_enable_signs=1
+
+" highlights spaces,tabs
+set listchars=tab:>-,trail:~,extends:>,precedes:<,space:.
