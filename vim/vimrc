@@ -46,6 +46,8 @@ Bundle "terryma/vim-multiple-cursors"
 " C+p fuzzy search
 Bundle 'kien/ctrlp.vim'
 
+Bundle 'wakatime/vim-wakatime'
+
 Plugin 'bling/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
 
@@ -61,3 +63,10 @@ let g:syntastic_enable_signs=1
 
 " highlights spaces,tabs
 set listchars=tab:>-,trail:~,extends:>,precedes:<,space:.
+set backspace=indent,eol,start
+set ruler
+let timer = timer_start(1000, 'PrintTime', {'repeat':-1})
+func PrintTime(timer)
+	echo
+	set rulerformat=%55(%{strftime('%a\ %b\ %e\ %I:%M:%S\ %p')}\ %5l,%-6(%c%V%)\ %P%)
+endfunc
