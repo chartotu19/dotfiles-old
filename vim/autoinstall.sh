@@ -14,6 +14,8 @@ install_vimrc () {
     [ -e "~/.vim" ] && die "~/.vim already exists."
     [ -e "~/.vimrc" ] && die "~/.vimrc already exists."
 
+	git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
+	vim +PluginInstall +qall
     git clone git://github.com/chartotu19/dotfiles.git $INSTALL_TO
     cd "$INSTALL_TO"/vim
 
