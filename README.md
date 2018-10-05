@@ -2,8 +2,10 @@
 personal collection of dotfiles.
 
 ### 1. zsh installation
-follow this : https://github.com/robbyrussell/oh-my-zsh
-
+- follow this : https://github.com/robbyrussell/oh-my-zsh
+- ```git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions```
+- copy .zshrc from this repo to ~/.zshrc.
+- new terminal shell.
 ### 2. .vimrc installation
 Please ensure `git` is already installed in your machine. Run the following command to install and configure this vimrc in your $HOME dir:
 
