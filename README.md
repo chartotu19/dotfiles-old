@@ -2,8 +2,9 @@
 personal collection of dotfiles.
 
 ### 1. zsh installation
+- ```$ apt-get update && apt install zsh -y ```
 - follow this : https://github.com/robbyrussell/oh-my-zsh
-- ```git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions```
+- ```$ git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions```
 - copy .zshrc from this repo to ~/.zshrc.
 - new terminal shell.
 ### 2. .vimrc installation
